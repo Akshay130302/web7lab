@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cosmic Mad Libs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/ITC505/lab-7/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Cosmic Mad Libs</h1>
+    <form action="/ITC505/lab-7/index.html" method="POST" id="madlibForm">
+      <div class="form-group">
+        <label for="hero">Hero Name:</label>
+        <input type="text" id="hero" name="hero" required placeholder="e.g. Captain Nebula"/>
+      </div>
+      <div class="form-group">
+        <label for="action">Space Activity:</label>
+        <input type="text" id="action" name="action" required placeholder="e.g. asteroid surfing"/>
+      </div>
+      <div class="form-group">
+        <label for="emotion">Alien Emotion:</label>
+        <input type="text" id="emotion" name="emotion" required placeholder="e.g. nostalgically excited"/>
+      </div>
+      <div class="form-group">
+        <label for="location">Galactic Location:</label>
+        <input type="text" id="location" name="location" required placeholder="e.g. Pluto's Ice Cream Parlor"/>
+      </div>
+      <div class="form-group">
+        <label for="creature">Space Creature:</label>
+        <input type="text" id="creature" name="creature" required placeholder="e.g. laser-shark"/>
+      </div>
+      <div class="buttons">
+        <button type="submit">Generate Space Adventure</button>
+        <button type="reset" class="reset-btn">Clear</button>
+      </div>
+    </form>
+  </div>
+  <footer>
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
+  <script>
+    document.getElementById('lastModified').textContent =
+      new Date(document.lastModified).toLocaleString();
+  </script>
+</body>
+</html>
